@@ -49,7 +49,7 @@ public class Movimiento : MonoBehaviour
         if (isGrounded)
         {
             canJump = true;
-            animator.SetBool("isJumping", false);
+            //animator.SetBool("isJumping", false);
         }
 
         // Manejo del salto
@@ -89,7 +89,7 @@ public class Movimiento : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         canJump = false;
-        animator.SetBool("isJumping", true);
+        //animator.SetBool("isJumping", true);
         jumpParticle.Play();
     }
 
