@@ -7,19 +7,25 @@ public class Brillo : MonoBehaviour
 {
     public Slider slider;
     public float sliderValue;
-    public Image panelBrillo;
+    public Image panelBrilloJuego;
+    public Image panelBrilloMenuPrincipal;
 
     void Start()
     {
-        slider.value = PlayerPrefs.GetFloat("brilllo", 0.5f);
+        slider.value = PlayerPrefs.GetFloat("brilllo", 0.1f);
 
-        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g, panelBrillo.color.b, slider.value);
+        panelBrilloJuego.color = new Color(panelBrilloJuego.color.r, panelBrilloJuego.color.g, panelBrilloJuego.color.b, slider.value);
+        panelBrilloMenuPrincipal.color = new Color(panelBrilloMenuPrincipal.color.r, panelBrilloMenuPrincipal.color.g, panelBrilloMenuPrincipal.color.b, slider.value);
     }
 
     public void ChangeSlider(float value)
     {
-        sliderValue = value;    
+        sliderValue = value;  
+        
         PlayerPrefs.SetFloat("brillo", sliderValue);
-        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g, panelBrillo.color.b, slider.value);
+
+        panelBrilloJuego.color = new Color(panelBrilloJuego.color.r, panelBrilloJuego.color.g, panelBrilloJuego.color.b, slider.value);
+        panelBrilloMenuPrincipal.color = new Color(panelBrilloMenuPrincipal.color.r, panelBrilloMenuPrincipal.color.g, panelBrilloMenuPrincipal.color.b, slider.value);
+
     }
 }
