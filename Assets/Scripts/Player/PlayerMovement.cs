@@ -4,30 +4,37 @@ using UnityEngine;
 public class Movimiento : MonoBehaviour
 {
     [Header("Jump")]
-    [SerializeField] public float jumpForce = 10f;          // Fuerza de salto
-   // [SerializeField] Animator animator;                     // Animator del jugador
-    [SerializeField] ParticleSystem jumpParticle;           // Efecto de partículas al saltar
-    private bool canJump;                                   // Controla si el jugador puede saltar
+    [SerializeField] public float jumpForce = 10f;
+    [SerializeField] ParticleSystem jumpParticle;
+    private bool canJump;
 
     [Header("Ground")]
-    [SerializeField] Transform groundCheckPoint;            // Punto para verificar si toca el suelo
-    [SerializeField] LayerMask GroundLayer;                 // Capa de suelo para la detección
-    [SerializeField] float distanceToGround = 1f;           // Distancia al suelo para verificar si está en el aire
-    private Rigidbody2D rb;                                 // Referencia al Rigidbody2D
+    [SerializeField] Transform groundCheckPoint;
+    [SerializeField] LayerMask GroundLayer;
+    [SerializeField] float distanceToGround = 1f;
+    private Rigidbody2D rb;
 
     [Header("Movement")]
-    [SerializeField] public float moveSpeed = 5f;           // Velocidad de movimiento
-    [SerializeField] public float friccion = 0.95f;         // Fricción para desacelerar cuando no hay input
+    [SerializeField] public float moveSpeed = 5f;
+    [SerializeField] public float friccion = 0.95f;
+
+    [Header("Animación")]
+    private Animator animator;
+    private bool facingRight = true;  // Control para saber si el personaje está mirando a la derecha
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();                // Asignamos el Animator
-       // animator.SetBool("isJumping", false);
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
+        float movimientoHorizontal;
+        movimientoHorizontal = Input.GetAxisRaw("Horizontal") * moveSpeed;
+
+        animator.SetFloat("Horizontal", Mathf.Abs(movimientoHorizontal));
+
         // Movimiento horizontal
         Vector2 movementInput = Vector2.zero;
         if (Input.GetKey(KeyCode.D))
@@ -42,7 +49,7 @@ public class Movimiento : MonoBehaviour
         if (isGrounded)
         {
             canJump = true;
-            //animator.SetBool("isJumping", false);
+            animator.SetBool("isJumping", false);
         }
 
         // Manejo del salto
@@ -61,26 +68,42 @@ public class Movimiento : MonoBehaviour
             // Aplicamos fricción para reducir la velocidad cuando no hay input
             rb.velocity = new Vector2(rb.velocity.x * friccion, rb.velocity.y);
         }
+
+        // Controlar la dirección en la que mira el personaje
+        if (movementInput.x > 0 && !facingRight)
+        {
+            Flip();
+        }
+        else if (movementInput.x < 0 && facingRight)
+        {
+            Flip();
+        }
     }
 
     private void Move(float direction)
     {
-        // Movimiento horizontal
         rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
     }
 
     private void Jump()
     {
-        // Aplicar fuerza de salto
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        canJump = false;  // Desactivamos el salto hasta que vuelva a tocar el suelo
-      //  animator.SetBool("isJumping", true);
-        jumpParticle.Play();  // Activar las partículas de salto
+        canJump = false;
+        animator.SetBool("isJumping", true);
+        jumpParticle.Play();
     }
 
-    // Verificar si el personaje está tocando el suelo
     private bool IsGrounded()
     {
         return Physics2D.Raycast(groundCheckPoint.position, Vector2.down, distanceToGround, GroundLayer);
+    }
+
+    // Método para invertir la dirección del personaje
+    private void Flip()
+    {
+        facingRight = !facingRight;  // Cambiamos la dirección
+        Vector3 scaler = transform.localScale;
+        scaler.x *= -1;  // Invertimos el eje X
+        transform.localScale = scaler;
     }
 }
