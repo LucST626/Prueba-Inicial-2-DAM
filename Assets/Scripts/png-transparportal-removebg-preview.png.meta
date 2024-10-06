@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      png-transparportal-removebg-preview_0: 8754490669646302039
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
