@@ -39,6 +39,7 @@ public class Movimiento : MonoBehaviour
         Vector2 movementInput = Vector2.zero;
         if (Input.GetKey(KeyCode.D))
             movementInput.x = 1;
+
         else if (Input.GetKey(KeyCode.A))
             movementInput.x = -1;
 
@@ -49,7 +50,7 @@ public class Movimiento : MonoBehaviour
         if (isGrounded)
         {
             canJump = true;
-            //animator.SetBool("isJumping", false);
+            animator.SetBool("Jump", false);
         }
 
         // Manejo del salto
@@ -89,7 +90,7 @@ public class Movimiento : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         canJump = false;
-        //animator.SetBool("isJumping", true);
+        animator.SetBool("Jump", true);
         jumpParticle.Play();
     }
 
