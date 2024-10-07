@@ -12,12 +12,19 @@ public class PlayerHealth : MonoBehaviour
     public Slider healthBar;  // Referencia a la barra de vida (Slider)
     public Image fillImage;  // Imagen del Slider que cambia de color
 
+    [Header("Audio")]
+    public AudioClip damageSound; // Clip de sonido para cuando recibe daño
+    private AudioSource audioSource; // Componente AudioSource
+
     private void Start()
     {
         currentHealth = maxHealth;  // Inicializar la salud
         healthBar.maxValue = maxHealth;  // Asignar el valor máximo al slider
         healthBar.value = currentHealth;  // Establecer el valor inicial del slider
         UpdateHealthBarColor();
+
+        // Obtener el componente AudioSource
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Llamado cuando el jugador recibe daño
@@ -25,13 +32,33 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.value = currentHealth;  // Actualizar la barra de vida
-
         UpdateHealthBarColor();  // Actualizar el color de la barra de vida
+
+        // Reproducir el sonido de daño
+        if (damageSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(damageSound);
+        }
 
         if (currentHealth <= 0)
         {
             Die();
         }
+    }
+
+    // Método para curar al jugador
+    public void Heal(int healAmount)
+    {
+        currentHealth += healAmount;
+
+        // No exceder la vida máxima
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        healthBar.value = currentHealth;  // Actualizar la barra de vida
+        UpdateHealthBarColor();  // Actualizar el color de la barra de vida
     }
 
     // Método para reiniciar la escena cuando el jugador muere
