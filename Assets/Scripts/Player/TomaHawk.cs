@@ -3,7 +3,7 @@ using UnityEngine;
 public class Tomahawk : MonoBehaviour
 {
     [Header("Rotación")]
-    public float rotationSpeed = 200f; // Velocidad de rotación en grados por segundo
+    public float rotationSpeed = -200f; // Velocidad de rotación en grados por segundo
 
     private void Update()
     {
