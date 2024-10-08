@@ -79,6 +79,8 @@ public class Movimiento : MonoBehaviour
         {
             Flip();
         }
+
+      
     }
 
     private void Move(float direction)
@@ -107,4 +109,5 @@ public class Movimiento : MonoBehaviour
         scaler.x *= -1;  // Invertimos el eje X
         transform.localScale = scaler;
     }
+
 }
