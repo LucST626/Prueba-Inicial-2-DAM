@@ -1821,8 +1821,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -180, y: 0}
-  m_SizeDelta: {x: 23.224304, y: 20}
+  m_AnchoredPosition: {x: -175, y: 0}
+  m_SizeDelta: {x: 21.1334, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1120570818
 MonoBehaviour:
@@ -1844,7 +1844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -4244463410823995066, guid: 80bf51a6d7f1b104eaf2f8bf4fe02a97, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2157,7 +2157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9987b8d9689a2e04c920418723b00e05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeOutAnimation: {fileID: 0}
+  fadeOutAnimation: {fileID: 7400000, guid: 5975ffc15378d8f43aa24bec9ad74b39, type: 2}
 --- !u!4 &1285970991
 Transform:
   m_ObjectHideFlags: 0
@@ -2468,7 +2468,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b8bd0af2a75978340868744d7e0cab17, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 32b75b3cb70ce564c9efde02e29b5142, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2476,7 +2476,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 110
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -2661,7 +2661,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SampleScene
+          m_StringArgument: Tutorial
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1461979026
