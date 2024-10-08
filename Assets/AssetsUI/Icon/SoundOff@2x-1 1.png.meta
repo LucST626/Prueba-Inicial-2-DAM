@@ -164,7 +164,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SoundOff@2x-1 1_0: 5588848691604503612
+      SoundOff@2x-1 1_1: 3532042138344649963
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
