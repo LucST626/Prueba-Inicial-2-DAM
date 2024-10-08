@@ -18,9 +18,9 @@ public class Movimiento : MonoBehaviour
     [SerializeField] public float moveSpeed = 5f;
     [SerializeField] public float friccion = 0.95f;
 
-    [Header("Animación")]
+    [Header("Animaci?n")]
     private Animator animator;
-    private bool facingRight = true;  // Control para saber si el personaje está mirando a la derecha
+    private bool facingRight = true;  // Control para saber si el personaje est? mirando a la derecha
 
     private void Start()
     {
@@ -43,10 +43,10 @@ public class Movimiento : MonoBehaviour
         else if (Input.GetKey(KeyCode.A))
             movementInput.x = -1;
 
-        // Chequear si está en el suelo
+        // Chequear si est? en el suelo
         bool isGrounded = IsGrounded();
 
-        // Si está en el suelo, permitimos el salto
+        // Si est? en el suelo, permitimos el salto
         if (isGrounded)
         {
             canJump = true;
@@ -66,11 +66,11 @@ public class Movimiento : MonoBehaviour
         }
         else
         {
-            // Aplicamos fricción para reducir la velocidad cuando no hay input
+            // Aplicamos fricci?n para reducir la velocidad cuando no hay input
             rb.velocity = new Vector2(rb.velocity.x * friccion, rb.velocity.y);
         }
 
-        // Controlar la dirección en la que mira el personaje
+        // Controlar la direcci?n en la que mira el personaje
         if (movementInput.x > 0 && !facingRight)
         {
             Flip();
@@ -99,10 +99,10 @@ public class Movimiento : MonoBehaviour
         return Physics2D.Raycast(groundCheckPoint.position, Vector2.down, distanceToGround, GroundLayer);
     }
 
-    // Método para invertir la dirección del personaje
+    // M?todo para invertir la direcci?n del personaje
     private void Flip()
     {
-        facingRight = !facingRight;  // Cambiamos la dirección
+        facingRight = !facingRight;  // Cambiamos la direcci?n
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;  // Invertimos el eje X
         transform.localScale = scaler;
