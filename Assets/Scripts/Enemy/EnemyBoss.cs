@@ -75,11 +75,9 @@ public class EnemyBoss : MonoBehaviour
     {
         while (Vector3.Distance(stone.transform.position, targetPosition) > 0.1f)
         {
-            Debug.Log("Moviendo la piedra...");  // Log para verificar si la piedra está moviéndose
             stone.transform.position = Vector3.MoveTowards(stone.transform.position, targetPosition, moveSpeed * Time.deltaTime);
             yield return null;  // Esperar un frame antes de continuar
         }
 
-        Debug.Log("Piedra ha llegado a la posición objetivo.");
     }
 }
