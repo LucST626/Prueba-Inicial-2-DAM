@@ -38,5 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final-Lv.unity
     guid: db4889854f2c4084ca037a0974ad69ce
+  - enabled: 1
+    path: Assets/Scenes/CinematicFinal.unity
+    guid: 59826c747006e4a4e9c9606fe279efd2
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

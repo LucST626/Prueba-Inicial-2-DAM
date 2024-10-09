@@ -10544,7 +10544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackForce: 10
-  damageAmount: 1
+  damageAmount: 0
 --- !u!1 &1274012223
 GameObject:
   m_ObjectHideFlags: 0
