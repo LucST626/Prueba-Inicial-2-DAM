@@ -34,6 +34,5 @@ public class CinematicScene : MonoBehaviour
             SceneManager.LoadScene("Tutorial");
 
         }
-
     }
 }

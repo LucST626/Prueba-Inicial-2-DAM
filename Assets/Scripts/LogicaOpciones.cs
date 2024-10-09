@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LogicaOpciones : MonoBehaviour
 {
-    [SerializeField] Image imagenPrueb;
+    //[SerializeField] Image imagenPrueb;
 
     public ControladorOpciones panelOpciones;
     private bool isPaused = false; // Estado de pausa
@@ -38,8 +38,7 @@ public class LogicaOpciones : MonoBehaviour
         panelOpciones.pantallaOpciones.SetActive(true); // Mostrar el panel de opciones
         Time.timeScale = 0f; // Pausar el juego
         isPaused = true; // Cambiar el estado a pausado
-        print(name);
-        imagenPrueb.color = Color.red;
+        //imagenPrueb.color = Color.red;
     }
 
     public void ResumeGame()
