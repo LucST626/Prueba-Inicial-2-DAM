@@ -13780,7 +13780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 2132807790}
   fillImage: {fileID: 1682308414}
   damageSound: {fileID: 8300000, guid: 41bf26289de3e2740856e12e538e22e1, type: 3}
   damageParticles: {fileID: 1411947668}
