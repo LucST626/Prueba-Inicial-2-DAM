@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LogicaOpciones : MonoBehaviour
 {
+    [SerializeField] Image imagenPrueb;
+
     public ControladorOpciones panelOpciones;
     private bool isPaused = false; // Estado de pausa
+    
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +38,8 @@ public class LogicaOpciones : MonoBehaviour
         panelOpciones.pantallaOpciones.SetActive(true); // Mostrar el panel de opciones
         Time.timeScale = 0f; // Pausar el juego
         isPaused = true; // Cambiar el estado a pausado
+        print(name);
+        imagenPrueb.color = Color.red;
     }
 
     public void ResumeGame()

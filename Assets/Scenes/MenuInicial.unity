@@ -4198,6 +4198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca015b8759aa53f448ba3ff3c473111b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  imagenPrueb: {fileID: 0}
   panelOpciones: {fileID: 0}
 --- !u!4 &2042775432
 Transform:
