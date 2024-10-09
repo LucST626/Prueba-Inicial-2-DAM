@@ -18,6 +18,7 @@ public class EnemyMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool facingRight = true;  // Control para la dirección del enemigo
+    public Animator animator;
 
     private void Start()
     {
@@ -40,14 +41,22 @@ public class EnemyMovement : MonoBehaviour
 
         if (playerInRange)
         {
-            FollowPlayer();
-        }
+            Vector2 direction = (player.position - transform.position).normalized;
+            rb.velocity = new Vector2(direction.x * moveSpeed, rb.velocity.y); // Forzamos el movimiento
 
-        // Verificamos si el enemigo está sobre el suelo
-        if (!IsGrounded())
+            // Actualizamos la animación "Walk" basándonos en la velocidad en el eje X
+            animator.SetFloat("Walk", Mathf.Abs(rb.velocity.x));
+
+            // Voltear el enemigo hacia el jugador
+            if ((direction.x > 0 && !facingRight) || (direction.x < 0 && facingRight))
+            {
+                Flip();
+            }
+        }
+        else
         {
-            // Si no hay suelo, podemos hacer que el enemigo se detenga o haga algo
-            StopMoving();
+            rb.velocity = new Vector2(0, rb.velocity.y); // Detenemos el enemigo cuando el jugador está fuera de rango
+            animator.SetFloat("Walk", 0); // Detenemos la animación de caminar
         }
     }
 
@@ -66,6 +75,7 @@ public class EnemyMovement : MonoBehaviour
     private void StopMoving()
     {
         rb.velocity = new Vector2(0, rb.velocity.y);
+        animator.SetFloat("Walk", 0);  // Detenemos la animación de caminar
     }
 
     private bool IsGrounded()
@@ -77,7 +87,7 @@ public class EnemyMovement : MonoBehaviour
     {
         facingRight = !facingRight;
         Vector3 scaler = transform.localScale;
-        scaler.x *= -1;
+        scaler.x *= 1;
         transform.localScale = scaler;
     }
 
