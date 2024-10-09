@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      letra-d_0: 1948872636227295266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

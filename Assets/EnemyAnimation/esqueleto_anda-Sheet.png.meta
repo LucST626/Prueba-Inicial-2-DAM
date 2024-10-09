@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 7891d0e720e522c46965d7155bbf1a64
+guid: 58cd549c4ce3ac1459173a62288a7050
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3664416963118359677
-    second: grifo_0
+      213: 5798108310593809561
+    second: esqueleto_anda-Sheet_0
   - first:
-      213: -4714611787216670538
-    second: grifo_1
+      213: -8511588115256140659
+    second: esqueleto_anda-Sheet_1
   - first:
-      213: -3846788344143612524
-    second: grifo_2
+      213: -206437014474506568
+    second: esqueleto_anda-Sheet_2
   - first:
-      213: -1531807522598358035
-    second: grifo_3
+      213: -5230424887526700268
+    second: esqueleto_anda-Sheet_3
   - first:
-      213: -3582810306254304534
-    second: grifo_4
+      213: -8529503024317082880
+    second: esqueleto_anda-Sheet_4
+  - first:
+      213: -3947612813967683716
+    second: esqueleto_anda-Sheet_5
+  - first:
+      213: -3171606970325747317
+    second: esqueleto_anda-Sheet_6
+  - first:
+      213: 9016401323539191367
+    second: esqueleto_anda-Sheet_7
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -63,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 42
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -122,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: grifo_0
+      name: esqueleto_anda-Sheet_0
       rect:
         serializedVersion: 2
-        x: 131
-        y: 437
-        width: 47
-        height: 47
+        x: 108
+        y: 599
+        width: 168
+        height: 136
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38b1a6cdf20652dc0800000000000000
-      internalID: -3664416963118359677
+      spriteID: 99c2f2ee9c4077050800000000000000
+      internalID: 5798108310593809561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grifo_1
+      name: esqueleto_anda-Sheet_1
       rect:
         serializedVersion: 2
-        x: 201
-        y: 454
-        width: 19
-        height: 58
+        x: 393
+        y: 599
+        width: 182
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b0b4110f85529eb0800000000000000
-      internalID: -4714611787216670538
+      spriteID: d8c98bb94b3c0e980800000000000000
+      internalID: -8511588115256140659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grifo_2
+      name: esqueleto_anda-Sheet_2
       rect:
         serializedVersion: 2
-        x: 243
-        y: 437
-        width: 47
-        height: 47
+        x: 700
+        y: 599
+        width: 175
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 495f435d1667d9ac0800000000000000
-      internalID: -3846788344143612524
+      spriteID: 8be31cb01a6922df0800000000000000
+      internalID: -206437014474506568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grifo_3
+      name: esqueleto_anda-Sheet_3
       rect:
         serializedVersion: 2
-        x: 101
-        y: 395
-        width: 60
-        height: 19
+        x: 100
+        y: 299
+        width: 181
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +208,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de3f04f8c2dedbae0800000000000000
-      internalID: -1531807522598358035
+      spriteID: 41bcb9ad64cc967b0800000000000000
+      internalID: -5230424887526700268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grifo_4
+      name: esqueleto_anda-Sheet_4
       rect:
         serializedVersion: 2
-        x: 133
+        x: 400
+        y: 299
+        width: 184
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003d5fcc03e11a980800000000000000
+      internalID: -8529503024317082880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esqueleto_anda-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 299
+        width: 164
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7f0da0af034739c0800000000000000
+      internalID: -3947612813967683716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esqueleto_anda-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 110
         y: 0
-        width: 278
-        height: 441
+        width: 162
+        height: 132
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,8 +271,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aea8a1e420d474ec0800000000000000
-      internalID: -3582810306254304534
+      spriteID: b89b49ea3403cf3d0800000000000000
+      internalID: -3171606970325747317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: esqueleto_anda-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 0
+        width: 153
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7465ae99b31b02d70800000000000000
+      internalID: 9016401323539191367
       vertices: []
       indices: 
       edges: []
@@ -237,11 +309,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      grifo_0: -3664416963118359677
-      grifo_1: -4714611787216670538
-      grifo_2: -3846788344143612524
-      grifo_3: -1531807522598358035
-      grifo_4: -3582810306254304534
+      esqueleto_anda-Sheet_0: 5798108310593809561
+      esqueleto_anda-Sheet_1: -8511588115256140659
+      esqueleto_anda-Sheet_2: -206437014474506568
+      esqueleto_anda-Sheet_3: -5230424887526700268
+      esqueleto_anda-Sheet_4: -8529503024317082880
+      esqueleto_anda-Sheet_5: -3947612813967683716
+      esqueleto_anda-Sheet_6: -3171606970325747317
+      esqueleto_anda-Sheet_7: 9016401323539191367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
