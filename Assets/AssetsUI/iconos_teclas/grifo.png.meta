@@ -236,7 +236,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      grifo_0: -3664416963118359677
+      grifo_1: -4714611787216670538
+      grifo_2: -3846788344143612524
+      grifo_3: -1531807522598358035
+      grifo_4: -3582810306254304534
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
