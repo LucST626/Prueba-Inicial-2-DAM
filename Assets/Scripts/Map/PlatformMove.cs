@@ -25,20 +25,23 @@ public class PlatformMove : MonoBehaviour
     {
         while (true)
         {
-            
-            elapsedTime = 0;
-
-            while (elapsedTime < animationDuration)
+            if (canMove)
             {
-                elapsedTime += Time.deltaTime;
+                elapsedTime = 0;
 
-                objectToMove.position = Vector3.LerpUnclamped(
-                    points[from].position,
-                    points[to].position,
-                    ease.Evaluate(elapsedTime / animationDuration)
-                );
+                while (elapsedTime < animationDuration)
+                {
+                    elapsedTime += Time.deltaTime;
 
-                yield return null;
+                    objectToMove.position = Vector3.LerpUnclamped(
+                        points[from].position,
+                        points[to].position,
+                        ease.Evaluate(elapsedTime / animationDuration)
+                    );
+
+                    yield return null;
+                }
+
             }
 
             IndexCount();
@@ -54,8 +57,8 @@ public class PlatformMove : MonoBehaviour
         to = (to + 1) % points.Length;
     }
 
-    /*
-    private void OnTriggerEnter(Collider collision)
+    
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -63,6 +66,6 @@ public class PlatformMove : MonoBehaviour
             canMove = true;
         }
     }
-    */
+    
 }
 
